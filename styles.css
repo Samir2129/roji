@@ -1,0 +1,1040 @@
+/* ===============================
+   PREMIUM BIRTHDAY WEBSITE
+   style.css (PART 1)
+   Theme : Pink + Purple
+================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    background:linear-gradient(180deg,#050018,#14042e,#23053d,#33064f);
+    color:#fff;
+    min-height:100vh;
+}
+
+/*========================
+LOADER
+=========================*/
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#090017;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    animation:loaderFade 3s forwards;
+}
+
+#loader h1{
+    font-size:40px;
+    font-family:'Great Vibes',cursive;
+    color:#ffb5ff;
+    animation:pulse 2s infinite;
+}
+
+@keyframes loaderFade{
+    0%{opacity:1;}
+    80%{opacity:1;}
+    100%{
+        opacity:0;
+        visibility:hidden;
+    }
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.08);}
+    100%{transform:scale(1);}
+}
+
+/*========================
+STAR BACKGROUND
+=========================*/
+
+#stars,
+#stars2,
+#stars3{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+}
+
+#stars{
+    background-image:
+    radial-gradient(white 1px,transparent 1px),
+    radial-gradient(#ffd8ff 1px,transparent 1px),
+    radial-gradient(#ffffff 2px,transparent 2px);
+
+    background-size:
+    90px 90px,
+    140px 140px,
+    210px 210px;
+
+    animation:moveStars 90s linear infinite;
+}
+
+#stars2{
+    background-image:
+    radial-gradient(#fff 2px,transparent 2px);
+
+    background-size:170px 170px;
+
+    opacity:.5;
+
+    animation:moveStars2 120s linear infinite;
+}
+
+#stars3{
+    background-image:
+    radial-gradient(#ffd5ff 2px,transparent 2px);
+
+    background-size:250px 250px;
+
+    opacity:.25;
+
+    animation:twinkle 5s infinite;
+}
+
+@keyframes moveStars{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-600px);
+    }
+
+}
+
+@keyframes moveStars2{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-400px);
+    }
+
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+        opacity:.2;
+    }
+
+    50%{
+        opacity:.8;
+    }
+
+}
+
+/*========================
+MOON
+=========================*/
+
+.moon{
+
+    position:fixed;
+
+    top:60px;
+
+    right:60px;
+
+    width:130px;
+
+    height:130px;
+
+    border-radius:50%;
+
+    background:#fff8dd;
+
+    box-shadow:
+    0 0 30px #fff,
+    0 0 70px #fff,
+    0 0 120px #ffefff;
+
+    z-index:-1;
+
+}
+
+/*========================
+SECTION
+=========================*/
+
+section{
+
+    width:100%;
+
+    padding:90px 20px;
+
+    text-align:center;
+
+}
+
+/*========================
+COUNTDOWN
+=========================*/
+
+#countdown-section h2{
+
+    font-size:38px;
+
+    margin-bottom:40px;
+
+    color:#ffd8ff;
+
+}
+
+.countdown{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+}
+
+.time-box{
+
+    width:150px;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    backdrop-filter:blur(15px);
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    transition:.4s;
+
+}
+
+.time-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 25px #ff75f7;
+
+}
+
+.time-box span{
+
+    display:block;
+
+    font-size:52px;
+
+    font-weight:700;
+
+    color:#ff9ef8;
+
+}
+
+.time-box p{
+
+    margin-top:10px;
+
+    font-size:18px;
+
+}
+
+/*========================
+HERO
+=========================*/
+
+.hero{
+
+    min-height:90vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.title{
+
+    font-size:70px;
+
+    font-family:'Great Vibes',cursive;
+
+    color:#ffc8ff;
+
+    text-shadow:
+
+    0 0 10px #fff,
+
+    0 0 25px #ff7ef8,
+
+    0 0 50px #ff57f1;
+
+    animation:glow 3s infinite;
+
+}
+
+.name{
+
+    font-size:60px;
+
+    margin-top:15px;
+
+    color:#ffffff;
+
+}
+
+.subtitle{
+
+    margin-top:20px;
+
+    font-size:22px;
+
+    color:#ffe3ff;
+
+}
+
+/*========================
+BUTTON
+=========================*/
+
+button{
+
+    margin-top:40px;
+
+    padding:16px 40px;
+
+    border:none;
+
+    border-radius:40px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    background:linear-gradient(45deg,#ff58d8,#8b4dff);
+
+    color:white;
+
+    transition:.4s;
+
+}
+
+button:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+
+    0 0 25px #ff58d8,
+
+    0 0 50px #8b4dff;
+
+}
+
+/*========================
+TEXT GLOW
+=========================*/
+
+@keyframes glow{
+
+    0%{
+
+        text-shadow:
+        0 0 10px #fff,
+        0 0 20px #ff84ff;
+
+    }
+
+    50%{
+
+        text-shadow:
+        0 0 20px #fff,
+        0 0 40px #ff52ff,
+        0 0 70px #ff52ff;
+
+    }
+
+    100%{
+
+        text-shadow:
+        0 0 10px #fff,
+        0 0 20px #ff84ff;
+
+    }
+
+}
+
+/*========================
+HIDDEN
+=========================*/
+
+.hidden{
+
+    display:none;
+
+}
+
+/*========================
+SCROLLBAR
+=========================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#13052b;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#ff72f5;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#ff3cdf;
+
+}
+/* ==========================================
+   PREMIUM BIRTHDAY WEBSITE
+   style.css (PART 2)
+   Gift • Cake • Gallery • Letter • Music
+========================================== */
+
+/*========================
+GIFT SECTION
+=========================*/
+
+#giftSection{
+    padding:100px 20px;
+    text-align:center;
+    animation:fadeIn 1s ease;
+}
+
+.gift-box{
+    width:170px;
+    height:170px;
+    margin:0 auto 35px;
+    background:linear-gradient(135deg,#ff63d8,#8a4dff);
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:90px;
+    cursor:pointer;
+    transition:.5s;
+    box-shadow:
+        0 0 20px rgba(255,99,216,.5),
+        0 0 50px rgba(138,77,255,.4);
+    animation:giftFloat 3s ease-in-out infinite;
+}
+
+.gift-box:hover{
+    transform:scale(1.08) rotate(-5deg);
+    box-shadow:
+        0 0 30px #ff7be5,
+        0 0 60px #a86dff;
+}
+
+@keyframes giftFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+#giftSection h2{
+    font-size:42px;
+    color:#ffd5ff;
+    margin-bottom:20px;
+}
+
+.message{
+    max-width:850px;
+    margin:0 auto;
+    padding:35px;
+    border-radius:25px;
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    font-size:20px;
+    line-height:1.9;
+    color:#fff;
+}
+
+/*========================
+CAKE SECTION
+=========================*/
+
+.cake-section{
+    padding:120px 20px;
+}
+
+.cake-section h2{
+    font-size:42px;
+    margin-bottom:40px;
+    color:#ffd2ff;
+}
+
+.cake{
+    width:220px;
+    height:140px;
+    margin:0 auto;
+    position:relative;
+    background:linear-gradient(#ff91d9,#ff67c7);
+    border-radius:15px 15px 25px 25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.cake::before{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:28px;
+    top:-20px;
+    left:0;
+    background:#fff;
+    border-radius:20px;
+}
+
+.cake::after{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:20px;
+    bottom:45px;
+    background:#ffc6f1;
+}
+
+.candle{
+    position:absolute;
+    width:14px;
+    height:60px;
+    background:#fff4d6;
+    left:50%;
+    top:-60px;
+    transform:translateX(-50%);
+    border-radius:5px;
+}
+
+.flame{
+    position:absolute;
+    width:18px;
+    height:28px;
+    background:gold;
+    left:50%;
+    top:-86px;
+    transform:translateX(-50%);
+    border-radius:50% 50% 50% 50%;
+    box-shadow:
+        0 0 15px gold,
+        0 0 30px orange;
+    animation:flicker .5s infinite alternate;
+}
+
+@keyframes flicker{
+    from{
+        transform:translateX(-50%) scale(1);
+    }
+    to{
+        transform:translateX(-50%) scale(1.15);
+    }
+}
+
+#wishBtn{
+    margin-top:45px;
+}
+
+/*========================
+PHOTO GALLERY
+=========================*/
+
+.gallery{
+    padding:110px 20px;
+}
+
+.gallery h2{
+    font-size:42px;
+    color:#ffd2ff;
+    margin-bottom:45px;
+}
+
+.photos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.photos img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:20px;
+    border:3px solid rgba(255,255,255,.15);
+    transition:.5s;
+    box-shadow:0 8px 25px rgba(0,0,0,.35);
+}
+
+.photos img:hover{
+    transform:scale(1.05) rotate(1deg);
+    box-shadow:
+        0 0 20px #ff77e8,
+        0 0 45px #8c63ff;
+}
+
+/*========================
+LETTER
+=========================*/
+
+.letter{
+    padding:120px 20px;
+}
+
+.letter h2{
+    font-size:42px;
+    color:#ffd5ff;
+    margin-bottom:35px;
+}
+
+.letter-card{
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+    border-radius:25px;
+    backdrop-filter:blur(18px);
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.18);
+    box-shadow:0 10px 35px rgba(0,0,0,.35);
+}
+
+.letter-card p{
+    font-size:21px;
+    line-height:2;
+    color:#fff;
+}
+
+/*========================
+MUSIC BUTTON
+=========================*/
+
+#musicBtn{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    z-index:999;
+    padding:15px 24px;
+    border:none;
+    border-radius:50px;
+    font-size:17px;
+    cursor:pointer;
+    background:linear-gradient(135deg,#ff63d8,#8d58ff);
+    color:#fff;
+    box-shadow:
+        0 0 20px rgba(255,99,216,.45),
+        0 0 35px rgba(141,88,255,.35);
+    transition:.3s;
+}
+
+#musicBtn:hover{
+    transform:scale(1.08);
+}
+
+/*========================
+FOOTER
+=========================*/
+
+footer{
+    padding:40px 20px;
+    text-align:center;
+    color:#ffd8ff;
+    font-size:18px;
+    letter-spacing:1px;
+}
+
+/*========================
+FADE ANIMATION
+=========================*/
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+/*=========================================
+ PREMIUM BIRTHDAY WEBSITE
+ style.css (PART 3)
+ Hearts • Balloons • Shooting Stars
+ Responsive • Fireworks Canvas
+==========================================*/
+
+/*==========================
+FLOATING HEARTS
+===========================*/
+
+#hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:2;
+}
+
+.heart{
+    position:absolute;
+    bottom:-50px;
+    color:#ff66cc;
+    font-size:24px;
+    animation:floatHeart linear forwards;
+    opacity:.85;
+}
+
+@keyframes floatHeart{
+    0%{
+        transform:translateY(0) scale(.8);
+        opacity:0;
+    }
+    10%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-110vh) translateX(80px) scale(1.4);
+        opacity:0;
+    }
+}
+
+/*==========================
+BALLOONS
+===========================*/
+
+.balloon{
+    position:absolute;
+    bottom:-200px;
+    width:70px;
+    height:90px;
+    border-radius:50%;
+    animation:balloonUp linear forwards;
+    box-shadow:0 0 20px rgba(255,255,255,.25);
+}
+
+.balloon::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:90px;
+    width:2px;
+    height:100px;
+    background:#ffffff88;
+}
+
+.balloon.pink{
+    background:#ff69d6;
+}
+
+.balloon.purple{
+    background:#9b59ff;
+}
+
+.balloon.white{
+    background:#ffffff;
+}
+
+@keyframes balloonUp{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-130vh);
+    }
+}
+
+/*==========================
+SHOOTING STAR
+===========================*/
+
+.shooting-star{
+    position:fixed;
+    top:-40px;
+    width:180px;
+    height:2px;
+    background:linear-gradient(to right,#fff,transparent);
+    transform:rotate(-35deg);
+    animation:shoot 5s linear infinite;
+    opacity:.9;
+}
+
+@keyframes shoot{
+    0%{
+        left:-250px;
+        top:80px;
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    100%{
+        left:120%;
+        top:420px;
+        opacity:0;
+    }
+}
+
+/*==========================
+SPARKLES
+===========================*/
+
+.sparkle{
+    position:absolute;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:white;
+    animation:sparkle 1s linear forwards;
+}
+
+@keyframes sparkle{
+    from{
+        transform:scale(0);
+        opacity:1;
+    }
+
+    to{
+        transform:scale(4);
+        opacity:0;
+    }
+}
+
+/*==========================
+ROSE PETALS
+===========================*/
+
+.petal{
+    position:absolute;
+    top:-60px;
+    color:#ff5ab8;
+    font-size:22px;
+    animation:petalFall linear forwards;
+}
+
+@keyframes petalFall{
+    from{
+        transform:translateY(0) rotate(0deg);
+    }
+
+    to{
+        transform:translateY(120vh) rotate(720deg);
+    }
+}
+
+/*==========================
+FIREWORK CANVAS
+===========================*/
+
+#fireworks{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:4;
+}
+
+/*==========================
+GLASS EFFECT
+===========================*/
+
+.time-box,
+.message,
+.letter-card{
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+}
+
+/*==========================
+TEXT SELECTION
+===========================*/
+
+::selection{
+    background:#ff4fcf;
+    color:white;
+}
+
+/*==========================
+RESPONSIVE
+===========================*/
+
+@media(max-width:992px){
+
+.title{
+    font-size:52px;
+}
+
+.name{
+    font-size:44px;
+}
+
+.countdown{
+    gap:15px;
+}
+
+.time-box{
+    width:120px;
+    padding:20px;
+}
+
+.time-box span{
+    font-size:40px;
+}
+
+.photos img{
+    height:240px;
+}
+
+}
+
+@media(max-width:768px){
+
+.title{
+    font-size:42px;
+}
+
+.name{
+    font-size:34px;
+}
+
+.subtitle{
+    font-size:18px;
+}
+
+#countdown-section h2{
+    font-size:28px;
+}
+
+.countdown{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+}
+
+.time-box{
+    width:100%;
+}
+
+button{
+    width:90%;
+    max-width:320px;
+}
+
+.message,
+.letter-card{
+    padding:25px;
+    font-size:17px;
+}
+
+.gallery h2,
+.letter h2,
+.cake-section h2{
+    font-size:30px;
+}
+
+.photos img{
+    height:220px;
+}
+
+#musicBtn{
+    right:15px;
+    bottom:15px;
+    font-size:15px;
+}
+
+.moon{
+    width:90px;
+    height:90px;
+    right:20px;
+}
+
+}
+
+@media(max-width:480px){
+
+.title{
+    font-size:34px;
+}
+
+.name{
+    font-size:28px;
+}
+
+.time-box span{
+    font-size:30px;
+}
+
+.time-box p{
+    font-size:14px;
+}
+
+.message,
+.letter-card{
+    font-size:15px;
+    line-height:1.8;
+}
+
+.photos{
+    grid-template-columns:1fr;
+}
+
+.photos img{
+    height:250px;
+}
+
+footer{
+    font-size:15px;
+}
+
+}
+
+/*==========================
+END
+===========================*/
