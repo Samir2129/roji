@@ -6,7 +6,7 @@
 
 "use strict";
 
-const BIRTHDAY_TIME = new Date(2026, 7, 29, 0, 0, 0, 0).getTime();
+const BIRTHDAY_TIME = new Date(2026, 7, 08, 22, 15, 0, 0).getTime();
 
 const dayEl = document.getElementById("days");
 const hourEl = document.getElementById("hours");
