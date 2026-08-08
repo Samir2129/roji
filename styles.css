@@ -301,21 +301,11 @@ HERO
 
 .name{
 
-font-size:70px;
+    font-size:60px;
 
-    font-family:'Great Vibes',cursive;
+    margin-top:15px;
 
-    color:#ffc8ff;
-
-    text-shadow:
-
-    0 0 10px #fff,
-
-    0 0 25px #ff7ef8,
-
-    0 0 50px #ff57f1;
-
-    animation:glow 3s infinite;
+    color:#ffffff;
 
 }
 
