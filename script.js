@@ -99,6 +99,19 @@ function setMessageVisibility(visible) {
     }
 }
 
+function setGiftLocked() {
+    if (giftSection) {
+        giftSection.classList.add("hidden");
+    }
+
+    if (openGift) {
+        openGift.disabled = true;
+        openGift.textContent = "🎁 Surprise Unlocks on 29/08/2026";
+    }
+
+    setMessageVisibility(false);
+}
+
 function setBirthdayState() {
     if (giftSection) {
         giftSection.classList.remove("hidden");
@@ -110,20 +123,6 @@ function setBirthdayState() {
     }
 
     setMessageVisibility(true);
-    startTypewriter();
-
-function setBirthdayState() {
-    if (surpriseContent) {
-        surpriseContent.hidden = false;
-    }
-
-    if (openGift) {
-        openGift.disabled = false;
-        openGift.textContent = "🎁 Open Your Surprise";
-    }
-
-    setMessageVisibility(true);
-
     startTypewriter();
 }
 
