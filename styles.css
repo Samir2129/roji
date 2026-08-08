@@ -170,7 +170,8 @@ MOON
     0 0 70px #fff,
     0 0 120px #ffefff;
 
-    z-index:-1;
+    z-index:1;
+    pointer-events:none;
 
 }
 
@@ -558,7 +559,7 @@ CAKE SECTION
     height:28px;
     background:gold;
     left:50%;
-    top:-86px;
+    top:-28px;
     transform:translateX(-50%);
     border-radius:50% 50% 50% 50%;
     box-shadow:
@@ -1038,3 +1039,74 @@ footer{
 /*==========================
 END
 ===========================*/
+
+/* ==========================
+   FINAL LAYERING & POLISH
+   ========================== */
+
+section,
+footer {
+    position: relative;
+    z-index: 5;
+}
+
+#countdown-section,
+.hero {
+    position: relative;
+    z-index: 5;
+}
+
+#loader {
+    z-index: 10000;
+}
+
+#fireworks {
+    z-index: 20;
+}
+
+#hearts {
+    z-index: 15;
+}
+
+.balloon,
+.petal,
+.shooting-star {
+    z-index: 3;
+}
+
+.sparkle {
+    z-index: 25;
+}
+
+button:disabled {
+    opacity: .65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* ==========================================
+   SURPRISE CONTENT LOCK
+   Everything after the Surprise button stays
+   completely hidden until birthday unlock.
+   ========================================== */
+
+#surpriseContent[hidden] {
+    display: none !important;
+}
+
+#surpriseContent {
+    position: relative;
+    z-index: 5;
+}
